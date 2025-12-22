@@ -245,7 +245,12 @@ function renderCharacters() {
         return;
     }
     
-    container.innerHTML = characters.map(character => {
+    // Sort characters alphabetically by name (case-insensitive)
+    const sortedCharacters = [...characters].sort((a, b) => 
+        a.name.localeCompare(b.name, undefined, { sensitivity: 'base' })
+    );
+    
+    container.innerHTML = sortedCharacters.map(character => {
         const hpPercentage = (character.currentHP / character.maxHP) * 100;
         const hpBarClass = getHPBarClass(character.currentHP, character.maxHP);
         const isSelected = selectedCharacterId === character.id;
