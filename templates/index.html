@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Cleric Hitpoint Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>D&D Cleric Hitpoint Tracker</h1>
+        </header>
+
+        <section class="add-character-section">
+            <h2>Add New Character</h2>
+            <form id="addCharacterForm">
+                <div class="form-group">
+                    <label for="characterName">Character Name:</label>
+                    <input type="text" id="characterName" name="name" required placeholder="Enter character name">
+                </div>
+                <div class="form-group">
+                    <label for="maxHP">Maximum Hit Points:</label>
+                    <input type="number" id="maxHP" name="maxHP" required min="1" placeholder="Enter max HP">
+                </div>
+                <button type="submit">Add Character</button>
+            </form>
+        </section>
+
+        <section class="characters-section">
+            <h2>Characters</h2>
+            <div id="charactersList" class="characters-list">
+                <p class="empty-message">No characters added yet. Add a character to get started!</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
+
