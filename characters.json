@@ -3,7 +3,7 @@
     "id": "1a62ed09-b218-4475-8ce5-d70ced17be36",
     "name": "Surra",
     "maxHP": 44,
-    "currentHP": 37
+    "currentHP": 44
   },
   {
     "id": "2c149263-e885-408e-adf7-72ee0344920c",
@@ -15,13 +15,13 @@
     "id": "444e721c-142b-436c-8b0c-7d157f44aa10",
     "name": "Kersarge",
     "maxHP": 70,
-    "currentHP": 52
+    "currentHP": 70
   },
   {
     "id": "68be782b-a9b7-4134-b728-23ec9f0a9540",
     "name": "Rowan",
     "maxHP": 44,
-    "currentHP": 22
+    "currentHP": 44
   },
   {
     "id": "722afecd-831f-483d-82ef-1dea0a6031a8",

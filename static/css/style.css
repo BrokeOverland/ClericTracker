@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #f5f5f5;
     min-height: 100vh;
     padding: 20px;
     color: #333;
@@ -20,29 +20,36 @@ body {
 header {
     text-align: center;
     margin-bottom: 30px;
-    color: white;
+    color: #333;
 }
 
 header h1 {
     font-size: 2.5em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #dc3545;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .add-character-section,
 .characters-section {
     background: white;
-    border-radius: 10px;
+    border: 2px solid #dc3545;
+    border-radius: 4px;
     padding: 25px;
     margin-bottom: 25px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .add-character-section h2,
 .characters-section h2 {
     margin-bottom: 20px;
-    color: #667eea;
-    border-bottom: 2px solid #667eea;
+    color: #dc3545;
+    border-bottom: 2px solid #dc3545;
     padding-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    letter-spacing: 0.5px;
 }
 
 .form-group {
@@ -59,31 +66,34 @@ header h1 {
 .form-group input {
     width: 100%;
     padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
+    border: 2px solid #dc3545;
+    border-radius: 4px;
     font-size: 16px;
     transition: border-color 0.3s;
 }
 
 .form-group input:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #dc3545;
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.2);
 }
 
 button {
-    background: #667eea;
+    background: #dc3545;
     color: white;
     border: none;
     padding: 12px 24px;
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
     transition: background 0.3s;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 button:hover {
-    background: #5568d3;
+    background: #c82333;
 }
 
 button:active {
@@ -105,21 +115,22 @@ button:active {
 }
 
 .character-card {
-    background: #f8f9fa;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
+    background: white;
+    border: 2px solid #dc3545;
+    border-radius: 4px;
     padding: 20px;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .character-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2);
 }
 
 .character-card.selected {
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+    border-color: #dc3545;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.3);
+    background: #fff5f5;
 }
 
 .character-header {
@@ -131,8 +142,10 @@ button:active {
 
 .character-name {
     font-size: 1.3em;
-    font-weight: bold;
-    color: #333;
+    font-weight: 700;
+    color: #dc3545;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .character-actions {
@@ -144,6 +157,8 @@ button:active {
     padding: 5px 10px;
     font-size: 12px;
     background: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
 }
 
 .btn-small:hover {
@@ -159,21 +174,31 @@ button:active {
 }
 
 .hp-display {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .hp-text {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 8px;
-    font-size: 0.9em;
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #333;
+}
+
+.hp-text span:first-child {
+    color: #dc3545;
+    font-weight: 700;
 }
 
 .hp-bar-container {
     width: 100%;
-    height: 25px;
+    height: 30px;
     background: #e0e0e0;
-    border-radius: 12px;
+    border: 1px solid #dc3545;
+    border-radius: 4px;
     overflow: hidden;
     position: relative;
 }
@@ -181,26 +206,26 @@ button:active {
 .hp-bar {
     height: 100%;
     transition: width 0.3s, background-color 0.3s;
-    border-radius: 12px;
+    border-radius: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-weight: bold;
-    font-size: 0.85em;
+    font-size: 0.9em;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .hp-bar.healthy {
-    background: linear-gradient(90deg, #28a745, #20c997);
+    background: #28a745;
 }
 
 .hp-bar.wounded {
-    background: linear-gradient(90deg, #ffc107, #ff9800);
+    background: #ffc107;
 }
 
 .hp-bar.critical {
-    background: linear-gradient(90deg, #dc3545, #c82333);
+    background: #dc3545;
 }
 
 .hp-controls {
@@ -208,6 +233,8 @@ button:active {
     flex-direction: column;
     gap: 10px;
     margin-bottom: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
 }
 
 .hp-input-group {
@@ -219,9 +246,15 @@ button:active {
 .hp-input-group input {
     flex: 1;
     padding: 8px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
+    border: 2px solid #dc3545;
+    border-radius: 4px;
     text-align: center;
+}
+
+.hp-input-group input:focus {
+    outline: none;
+    border-color: #c82333;
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.2);
 }
 
 .btn-hp {
@@ -262,13 +295,13 @@ button:active {
 }
 
 .btn-edit {
-    background: #17a2b8;
+    background: #6c757d;
     font-size: 14px;
     padding: 8px 15px;
 }
 
 .btn-edit:hover {
-    background: #138496;
+    background: #5a6268;
 }
 
 @media (max-width: 768px) {
